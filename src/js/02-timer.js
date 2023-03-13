@@ -25,7 +25,7 @@ const options = {
       startButton.addEventListener('click', convertMs);
 
       function convertMs(ms) {
-        timerId = setInterval(() => {
+        const timerId = setInterval(() => {
           const actualDate = new Date().getTime();
           let timeLeft = chosenDate - actualDate;
           const ms = timeLeft;
