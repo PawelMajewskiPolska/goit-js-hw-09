@@ -1,0 +1,2 @@
+!function(){var e=document.querySelector('input[name="delay"]');console.log(e);var o=document.querySelector('input[name="step"]');console.log(o);var n=document.querySelector('input[name="amount"]');console.log(n);var t=document.querySelector("button");console.log(t),t.addEventListener("click",(function(){setTimeout((function(){var e=function(e){var n=e*o.value;setTimeout((function(){console.log("wywołanie numer ".concat(e+1))}),n)};console.log("pierwsze wywołanie");for(var t=0;t<n.value;t++)e(t)}),e.value)}))}();
+//# sourceMappingURL=03-promises.e5cb2694.js.map
