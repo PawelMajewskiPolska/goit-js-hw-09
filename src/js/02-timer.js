@@ -21,21 +21,16 @@ const options = {
       window.alert('Please choose a date in the future');
     } else {
       startButton.disabled = false;
-      /* leftDayCounter = chosenDate / 10000;
-      console.log(leftDayCounter);
-      leftDay.textContent = Number(leftDayCounter);
-      console.log(leftDay.textContent), */
+
       startButton.addEventListener('click', convertMs);
 
       function convertMs(ms) {
         timerId = setInterval(() => {
           const actualDate = new Date().getTime();
-          /* console.log(chosenDate); */
-          /* console.log(actualDate); */
+
           let timeLeft = chosenDate - actualDate;
-          /*  console.log(timeLeft); */
+
           const ms = timeLeft;
-          /* console.log(chosenDate - actualDate); */
 
           // Number of milliseconds per unit of time
 
@@ -84,7 +79,7 @@ const options = {
             leftMinutes.textContent = leftMinutes.textContent.padStart(2, '0');
           }
           leftSeconds.textContent = seconds;
-          if (seconds === 0) {
+          if (minutes === 0 && seconds === 0) {
             leftSeconds.style.color = 'azure';
           } else {
             leftSeconds.style.color = 'red';
@@ -114,15 +109,3 @@ const options = {
 };
 
 flatpickr('#datetime-picker', options);
-
-/* const newColor = () => {
-    timerId = setInterval(() => {
-      bodyColor.style.backgroundColor = getRandomHexColor();
-    }, 1000);
-    startButton.disabled = true;
-  };
-  
-  const stopColor = () => {
-    clearInterval(timerId);
-    startButton.disabled = false;
-  }; */
