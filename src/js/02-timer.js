@@ -47,6 +47,18 @@ const options = {
           const minutes = Math.floor(((ms % day) % hour) / minute);
           // Remaining seconds
           const seconds = Math.floor((((ms % day) % hour) % minute) / second);
+          if (timeLeft <= 0) {
+            clearInterval(timerId);
+            console.log('count finished');
+            /* leftDays.textContent = '00';
+            leftDays.style.color = 'azure';
+            leftHours.textContent = '00';
+            leftHours.style.color = 'azure';
+            leftMinutes.textContent = '00';
+            leftMinutes.style.color = 'azure';
+            leftSeconds.textContent = '00';
+            leftSeconds.style.color = 'azure'; */
+          }
 
           leftDays.textContent = days;
           if (days === 0) {
@@ -88,9 +100,8 @@ const options = {
           if (secondsDisplayLength < 2) {
             leftSeconds.textContent = leftSeconds.textContent.padStart(2, '0');
           }
-
           if (timeLeft <= 0) {
-            clearInterval(timerId);
+            /* clearInterval(timerId); */
             console.log('count finished');
             leftDays.textContent = '00';
             leftDays.style.color = 'azure';
