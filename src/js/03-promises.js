@@ -28,7 +28,6 @@ function takeSetStepDelay() {
 function test() {
   setTimeout(() => {
     console.log('pierwsze wywołanie');
-
     for (let i = 0; i < setAmount.value; i++) {
       const delay = i * setStepDelay.value;
       setTimeout(() => {
