@@ -27,10 +27,12 @@ const options = {
       function convertMs(ms) {
         timerId = setInterval(() => {
           const actualDate = new Date().getTime();
-
           let timeLeft = chosenDate - actualDate;
-
           const ms = timeLeft;
+          if (timeLeft <= 0) {
+            clearInterval(timerId);
+            /* console.log('count finished'); */
+          }
 
           // Number of milliseconds per unit of time
 
@@ -47,18 +49,6 @@ const options = {
           const minutes = Math.floor(((ms % day) % hour) / minute);
           // Remaining seconds
           const seconds = Math.floor((((ms % day) % hour) % minute) / second);
-          if (timeLeft <= 0) {
-            clearInterval(timerId);
-            console.log('count finished');
-            /* leftDays.textContent = '00';
-            leftDays.style.color = 'azure';
-            leftHours.textContent = '00';
-            leftHours.style.color = 'azure';
-            leftMinutes.textContent = '00';
-            leftMinutes.style.color = 'azure';
-            leftSeconds.textContent = '00';
-            leftSeconds.style.color = 'azure'; */
-          }
 
           leftDays.textContent = days;
           if (days === 0) {
