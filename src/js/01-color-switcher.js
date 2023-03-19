@@ -15,7 +15,8 @@ const newColor = () => {
     clearInterval(timerId);
     startButton.disabled = false;
   };
+
+  stopButton.addEventListener('click', stopColor);
 };
 
 startButton.addEventListener('click', newColor);
-stopButton.addEventListener('click', stopColor);
