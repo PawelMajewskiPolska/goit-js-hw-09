@@ -1,2 +1,0 @@
-const e=document.querySelector('input[name="delay"]');console.log(e);const o=document.querySelector('input[name="step"]');console.log(o);const n=document.querySelector('input[name="amount"]');console.log(n);const t=document.querySelector("button");console.log(t),t.addEventListener("click",(function(){setTimeout((()=>{console.log("pierwsze wywołanie");for(let e=0;e<n.value;e++){const n=e*o.value;setTimeout((()=>{console.log(`wywołanie numer ${e+1}`)}),n)}}),e.value)}));
-//# sourceMappingURL=03-promises.baf81ba0.js.map
