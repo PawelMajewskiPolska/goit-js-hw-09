@@ -54,3 +54,33 @@ button {
   background-color: #484646;
   color: azure;
 }
+
+/* .temporary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgb(182, 176, 176);
+}
+
+.fullfiled {
+  background-color: rgb(84, 238, 12);
+  border-radius: 2px;
+  display: flex;
+  margin-top: 13px;
+  color: azure;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+}
+.rejected {
+  background-color: rgb(238, 56, 74);
+  border-radius: 2px;
+  display: flex;
+  margin-top: 13px;
+  color: azure;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+}
+ */
