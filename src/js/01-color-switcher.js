@@ -5,7 +5,6 @@ const bodyColor = document.querySelector('body');
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
-
 const newColor = () => {
   const timerId = setInterval(() => {
     bodyColor.style.backgroundColor = getRandomHexColor();
@@ -19,5 +18,4 @@ const newColor = () => {
 
   stopButton.addEventListener('click', stopColor);
 };
-
 startButton.addEventListener('click', newColor);
